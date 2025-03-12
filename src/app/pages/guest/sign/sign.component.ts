@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-import {
-	AlertService,
-	CoreService,
-	HashService,
-	HttpService,
-	UiService
-} from 'wacom';
+import { AlertService, CoreService, HttpService, UiService } from 'wacom';
 import { Router } from '@angular/router';
 import { FormInterface } from 'src/app/core/modules/form/interfaces/form.interface';
 import { FormService } from 'src/app/core/modules/form/form.service';
@@ -107,7 +101,6 @@ export class SignComponent {
 		public ui: UiService,
 		private _alert: AlertService,
 		private _http: HttpService,
-		private _hash: HashService,
 		private _router: Router,
 		private _form: FormService,
 		private _translate: TranslateService,
@@ -132,8 +125,6 @@ export class SignComponent {
 				text: this._translate.translate('Sign.Enter your password')
 			});
 		} else {
-			this._hash.set('email', this.user.email);
-
 			this._http.post(
 				'/api/user/status',
 				this.user,
@@ -186,13 +177,21 @@ export class SignComponent {
 
 	private _set = (user: User): void => {
 		if (user) {
+			const token = (user as unknown as { token: string }).token || '';
+
+			if (token) {
+				this._http.set('token', token);
+			}
+
 			this._core.emit('wipe');
 
 			localStorage.setItem('waw_user', JSON.stringify(user));
 
 			this.us.setUser(user);
 
-			this.us.get();
+			this.us.get({
+				query: environment.appId ? 'appId=' + environment.appId : ''
+			});
 
 			this._router.navigateByUrl('/profile');
 		} else {

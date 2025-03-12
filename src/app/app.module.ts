@@ -15,6 +15,7 @@ import { GuestGuard } from './core/guards/guest.guard';
 import { AdminsGuard } from './core/guards/admins.guard';
 import { TeachersGuard } from './core/guards/teacher.guard';
 import { PublicComponent } from './core/theme/public/public.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const schoolPages = [
 	{
@@ -427,7 +428,8 @@ const routes: Routes = [
 		AuthenticatedGuard,
 		GuestGuard,
 		AdminsGuard,
-		TeachersGuard
+		TeachersGuard,
+		{ provide: LocationStrategy, useClass: HashLocationStrategy }
 	],
 	bootstrap: [AppComponent]
 })

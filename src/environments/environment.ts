@@ -7,7 +7,7 @@ export const environment = {
 	...environmentProd,
 	production: false,
 	user: {
-		email: 'ceo@webart.work',
+		email: 'demo@webart.work',
 		password: 'asdasdasdasd'
 	}
 };
