@@ -1,0 +1,91 @@
+<div [class.documents-wrapper--open]="isMenuOpen" class="documents-wrapper">
+	<div class="documents-container">
+		<div class="documents-list">
+			<div class="documents-header">
+				<div class="documents-header-left">
+					<div class="documents-header-left__arrow" (click)="back()">
+						<span class="material-icons">arrow_back_ios</span>
+					</div>
+					<div
+						class="documents-header-left__avatar"
+						routerLink="/profile"
+					>
+						<img [src]="userService.thumb" alt="" />
+					</div>
+				</div>
+				<div class="documents-header__title">{{course.name}}</div>
+				<div
+					(click)="isMenuOpen = !isMenuOpen"
+					class="burger-wrap"
+					class="burger-wrap"
+				>
+					<div
+						[class.burger--close]="isMenuOpen"
+						class="burger"
+					></div>
+				</div>
+			</div>
+			<div
+				[class.documents-sidebar--open]="isMenuOpen"
+				class="documents-sidebar"
+			>
+				<div
+					(click)="isMenuOpen = !isMenuOpen"
+					class="documents-sidebar__close"
+				>
+					<span class="material-icons">close</span>
+				</div>
+				<div class="documents-sidebar-content">
+					<div class="documents-sidebar__img">
+						<img [src]="course.thumb" alt="" />
+					</div>
+					<div class="documents-sidebar__title">{{course.name}}</div>
+					<div class="documents-sidebar__description">
+						{{course.description}}
+					</div>
+					<wselect
+						*ngIf="lesson && show === 'lesson'"
+						(modelChange)="setLesson($event)"
+						[select]="lesson._id"
+						[items]="lessons"
+					></wselect>
+
+					<wbutton
+						*ngIf="certificate && show !== 'lesson'"
+						(click)="show = 'lesson'"
+					>
+						<span translate>Common.Перейти до лекцій</span>
+					</wbutton>
+
+					<wbutton *ngIf="!certificate" (click)="buy()"
+						><span translate>Common.Придбати</span></wbutton
+					>
+				</div>
+			</div>
+			<div class="documents-main">
+				<div class="documents-main-content">
+					<app-view
+						(selectLesson)="setLesson($event)"
+						*ngIf="show === 'view'"
+						[lessons]="allLessons"
+						[course]="course"
+					></app-view>
+
+					<app-lesson
+						*ngIf="show === 'lesson' && lesson && certificate"
+						[certificate]="certificate"
+						[lesson]="lesson"
+						[tests]="tests"
+					></app-lesson>
+
+					<app-buy
+						[sessionId]="sessionId"
+						*ngIf="show === 'buy'"
+						[courseId]="courseId"
+						(paid)="show = 'lesson'; certificate = $event"
+					></app-buy>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

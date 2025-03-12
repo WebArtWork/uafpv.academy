@@ -1,0 +1,36 @@
+<div class="documents-main-row">
+	<div class="documents__title">{{lesson.name}}</div>
+	<div class="documents__description" [innerHTML]="lesson.description"></div>
+</div>
+<div class="documents-main-row" *ngFor="let test of tests">
+	<div class="documents__title">{{test.name}}</div>
+	<div class="documents__description" [innerHTML]="test.description"></div>
+
+	<div *ngFor="let question of test.questions">
+		<p>{{question.question}}</p>
+
+		<winput
+			(wChange)="question.text = $event + ''"
+			placeholder="answer the question"
+			*ngIf="question.type === 'Text'"
+		></winput>
+
+		<winput
+			(wChange)="question.radio = $event + ''"
+			*ngIf="question.type === 'Radio'"
+			[items]="question.answers"
+			type="radio"
+		></winput>
+
+		<winput
+			(wChange)="setCheckboxes(question, $event)"
+			*ngIf="question.type === 'Checkbox'"
+			[items]="question.answers"
+			type="checkbox"
+		></winput>
+	</div>
+
+	<wbutton (click)="answer(test)">
+		<span translate>Common.Checkup</span>
+	</wbutton>
+</div>

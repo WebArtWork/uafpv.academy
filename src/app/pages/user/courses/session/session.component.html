@@ -1,0 +1,117 @@
+<div class="courses-wrapper" (click)="go()">
+	<div class="courses-img">
+		<img [src]="scs.doc(session.course).thumb" alt="" />
+	</div>
+	<div class="courses-text">
+		<div class="documents__title">{{scs.doc(session.course).name}}</div>
+
+		<div class="documents__description">
+			{{scs.doc(session.course).description}}
+		</div>
+		<div class="courses-text-author">
+			<div class="courses-text-author__img courses-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					style="enable-background: new 0 0 24 24"
+					version="1.1"
+					viewBox="0 0 24 24"
+					xml:space="preserve"
+				>
+					<g id="info" />
+					<g id="icons">
+						<g id="user">
+							<ellipse cx="12" cy="8" rx="5" ry="6" />
+							<path
+								d="M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z"
+							/>
+						</g>
+					</g>
+				</svg>
+			</div>
+			<div class="courses-text-author__text">
+				Автор курсу:
+				<span
+					>{{userService.doc(scs.doc(session.course).author).name}}</span
+				>
+			</div>
+		</div>
+		<!-- <div class="courses-text-lessons">
+			<div class="courses-text-lessons__img courses-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					version="1.0"
+					width="512.000000pt"
+					height="512.000000pt"
+					viewBox="0 0 512.000000 512.000000"
+					preserveAspectRatio="xMidYMid meet"
+				>
+					<g
+						transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+						fill="#000000"
+						stroke="none"
+					>
+						<path
+							d="M1359 4066 c-60 -21 -96 -54 -125 -111 -55 -113 -16 -231 95 -287 l55 -28 1782 0 1782 0 53 28 c93 48 137 150 109 252 -16 58 -89 133 -145 149 -63 17 -3557 15 -3606 -3z"
+						/>
+						<path
+							d="M1570 3020 c0 -330 3 -450 11 -450 7 0 114 49 238 110 124 60 250 115 280 121 114 24 239 -13 329 -96 164 -151 169 -397 13 -554 -30 -29 -81 -63 -132 -88 -46 -23 -232 -114 -412 -202 l-329 -161 4 -238 c3 -201 6 -243 21 -277 23 -50 61 -91 112 -118 l40 -22 1421 0 1421 0 48 30 c27 17 63 50 80 74 l30 43 3 1139 2 1139 -1590 0 -1590 0 0 -450z m2635 225 c31 -30 32 -73 4 -109 l-20 -26 -1022 0 -1021 0 -23 22 c-32 30 -31 81 2 113 l24 25 1016 0 1016 0 24 -25z m-630 -550 c60 -24 69 -95 18 -135 -25 -19 -42 -20 -480 -20 l-455 0 -29 29 c-16 17 -29 40 -29 54 0 31 34 74 63 80 12 2 215 5 450 6 353 1 434 -2 462 -14z m630 -580 c31 -30 32 -73 4 -109 l-20 -26 -787 0 -786 0 -23 22 c-32 30 -31 81 2 113 l24 25 781 0 781 0 24 -25z m-606 -562 c11 -10 24 -32 27 -50 5 -27 1 -37 -24 -63 l-30 -30 -712 0 -711 0 -24 25 c-32 31 -33 80 -3 112 l21 23 718 0 c668 0 718 -1 738 -17z"
+						/>
+						<path
+							d="M565 3077 c-59 -20 -83 -35 -138 -86 -181 -168 -138 -461 84 -578 49 -26 63 -28 159 -28 101 0 108 1 168 34 74 40 124 93 161 171 22 47 26 68 26 145 -1 79 -4 98 -29 149 -62 127 -172 199 -311 203 -46 2 -97 -3 -120 -10z"
+						/>
+						<path
+							d="M1754 2464 c-197 -97 -417 -204 -489 -237 l-130 -62 -335 -6 c-365 -7 -382 -10 -505 -72 -73 -36 -189 -150 -228 -224 -57 -106 -67 -179 -67 -467 0 -244 1 -263 20 -294 38 -62 41 -62 553 -62 l464 0 34 23 c54 36 59 56 59 224 0 169 10 232 49 312 54 113 86 134 510 343 212 105 431 212 487 238 55 26 117 62 139 81 152 134 57 379 -146 379 -52 0 -82 -13 -415 -176z"
+						/>
+					</g>
+				</svg>
+			</div>
+			<div class="courses-text-lessons__text">
+				Всього лекцій: <span>65</span>
+			</div>
+		</div> -->
+		<div class="courses-text-time">
+			<div class="courses-text-time__img courses-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					height="512px"
+					id="Layer_1"
+					style="enable-background: new 0 0 512 512"
+					version="1.1"
+					viewBox="0 0 512 512"
+					width="512px"
+					xml:space="preserve"
+				>
+					<g>
+						<path
+							d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M273,273H160v-17h96V128h17   V273z"
+						/>
+					</g>
+				</svg>
+			</div>
+			<div class="courses-text-time__text">
+				Травалість:
+				<span>{{scs.doc(session.course).duration}} год.</span>
+			</div>
+		</div>
+
+		<div *ngIf="scs.doc(session.course).suggestedCourse">
+			Перед проходженням цього курсу рекомендується спочатку пройти
+			{{scs.doc(scs.doc(session.course).suggestedCourse).name}}, щоб краще
+			ознайомитися з матеріалом.
+		</div>
+		<div *ngIf="scs.doc(session.course).requiredCourse">
+			Для проходження цього курсу необхідно спочатку завершити
+			{{scs.doc(scs.doc(session.course).requiredCourse).name}}, оскільки
+			він містить важливі базові знання.
+		</div>
+
+		<wbutton
+			*ngIf="userService.user.email"
+			(click)="participate(); $event.stopPropagation()"
+			class="courses__btn"
+			>{{scs.doc(session.course).cost}} грн</wbutton
+		>
+	</div>
+</div>

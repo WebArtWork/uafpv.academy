@@ -1,0 +1,14 @@
+<wtable title="Suppliers" [columns]="columns" [config]="config" [rows]="rows">
+	<ng-template cell="phone" let-element>
+		<a style="color: white" href="tel:{{element.phone}}"
+			>{{element.phone}}</a
+		>
+	</ng-template>
+	<ng-template cell="website" let-element>
+		<a
+			style="color: white"
+			href="{{element.website.startsWith('http') ? '' : 'http://'}}{{element.website}}"
+			>{{element.website}}</a
+		>
+	</ng-template>
+</wtable>

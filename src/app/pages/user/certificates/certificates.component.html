@@ -1,0 +1,58 @@
+<div class="documents-wrapper" [class.documents-wrapper--open]="isMenuOpen">
+	<div class="documents-container">
+		<div class="documents-list">
+			<div class="documents-header">
+				<div class="documents-header-left">
+					<div class="documents-header-left__arrow" (click)="back()">
+						<span class="material-icons">arrow_back_ios</span>
+					</div>
+					<div
+						class="documents-header-left__avatar"
+						routerLink="/profile"
+					>
+						<img [src]="userService.thumb" alt="" />
+					</div>
+				</div>
+				<div class="documents-header__title">Title header</div>
+				<div
+					(click)="isMenuOpen = !isMenuOpen"
+					class="burger-wrap"
+					class="burger-wrap"
+				>
+					<div
+						[class.burger--close]="isMenuOpen"
+						class="burger"
+					></div>
+				</div>
+			</div>
+			<div class="documents-main documents-main--nobar">
+				<div
+					class="documents-main-content"
+					*ngIf="certificates?.length"
+				>
+					<p class="course__title">Дипломи</p>
+					<div
+						*ngFor="let certificate of certificates"
+						class="documents-main-row"
+					>
+						<app-certificate
+							[certificate]="certificate"
+						></app-certificate>
+					</div>
+				</div>
+				<div
+					class="documents-main-content"
+					*ngIf="!certificates?.length"
+				>
+					<p class="course__title course__none">
+						<span class="material-icons error course__none--icon">
+							error
+							</span>
+						У вас поки що немає сертифікатів. Вони з'являться тут
+						після проходження курсів
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+.course{
+    &__none{
+        color: var(--c-text-primary);
+        text-align: center;
+        font-weight: 600;
+        font-size: 22px;
+        &--icon{
+            display: block;
+            font-size: 46px;
+        }
+    }
+}

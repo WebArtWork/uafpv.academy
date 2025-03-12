@@ -1,0 +1,185 @@
+
+.certificat{
+    &__qr{
+        img{
+            width: 115px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    &__logo{
+        max-width: 250px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+        &-name{
+            font-family: "Jersey 25", serif;
+            text-align: center;
+            font-size: 70px;
+            color: #C4A459;
+            .blue{
+                color:#3F82E8;
+            }
+            .yellow{
+                color: #F9D549;
+            }
+        }
+    }
+    &__title{
+        font-size: 35px;
+        text-align: center;
+        font-weight: 900;
+        color: var(--c-text-primary);
+    }
+    &__subtitle{
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        color: #C4A459;
+    }
+    &__description{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 20px;
+        color: var(--c-text-primary);
+    }
+    &-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 35px;
+        margin-top: auto;
+        padding-bottom: 20px;
+    }
+    &__name{
+        font-size: 30px;
+        font-weight: 700;
+        border-bottom: 2px solid #C4A459;
+        color: var(--c-text-primary);
+    }
+    &-mark{
+        display: flex;
+        align-items: center;
+
+        &__text{
+            font-size: 30px;
+            font-weight: 700;
+            padding-right: 20px;
+            color: var(--c-text-primary);
+        }
+        &__img-icon{
+            position: relative;
+            display: flex;
+        }
+        &__img-text{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 0;
+        }
+    }
+    &__sign{
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        img{
+            width: 100px;
+        }
+    }
+    &-wrap{
+        height: calc(100vh - 160px);
+        display: flex;
+        flex-flow: column wrap;
+    }
+    &__author{
+		text-align: center;
+		font-size: 25px;
+		padding-top: 15px;
+		font-weight: 500;
+	}
+}
+
+@media screen and (max-width: 991px) {
+    .certificat__logo {
+        max-width: 200px;
+    }
+    .certificat__logo-name {
+        font-size: 50px;
+    }
+    .certificat__title {
+        font-size: 28px;
+    }
+    .certificat__subtitle{
+        font-size: 25px;
+    }
+    .certificat__description{
+        font-size: 18px;
+    }
+    .certificat__name{
+        font-size: 20px;
+    }
+    .certificat-mark__text{
+        font-size: 20px;
+    }
+    .certificat-mark__img-icon svg{
+        width: 65px;
+        height: 65px;
+    }
+    .certificat-mark__img-text{
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .certificat__title{
+        font-size: 24px;
+    }
+    .certificat__subtitle {
+        font-size: 20px;
+    }
+    .certificat-footer {
+        flex-flow: column;
+    }
+    .certificat-mark{
+        margin-top: 25px;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .certificat__logo {
+        max-width: 160px;
+    }
+    .certificat__logo-name {
+        font-size: 38px;
+    }
+    .certificat__title {
+        font-size: 20px;
+    }
+    .certificat__subtitle{
+        font-size: 18px;
+        padding-top: 6px;
+    }
+    .certificat__description {
+        font-size: 16px;
+    }
+    .certificat__name {
+        font-size: 22px;
+    }
+    .certificat-mark__text{
+        font-size: 25px;
+    }
+    .certificat-mark__img-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+    .certificat-mark__img-text {
+        font-size: 34px;
+    }
+}

@@ -1,0 +1,56 @@
+<div class="documents-wrapper" [class.documents-wrapper--open]="isMenuOpen">
+	<div class="documents-container">
+		<div class="documents-list">
+			<div class="documents-header">
+				<div class="documents-header-left">
+					<div class="documents-header-left__arrow" (click)="back()">
+						<span class="material-icons">arrow_back_ios</span>
+					</div>
+					<div
+						class="documents-header-left__avatar"
+						routerLink="/profile"
+					>
+						<img [src]="userService.thumb" alt="" />
+					</div>
+				</div>
+				<div class="documents-header__title">Курси</div>
+				<div
+					(click)="isMenuOpen = !isMenuOpen"
+					class="burger-wrap"
+					class="burger-wrap"
+				>
+					<div
+						[class.burger--close]="isMenuOpen"
+						class="burger"
+					></div>
+				</div>
+			</div>
+			<div class="documents-main documents-main--nobar">
+				<div class="documents-main-content">
+					<ng-container *ngIf="userService.user.email">
+						<p class="course__title" *ngIf="certificates.length">
+							Придбані курси
+						</p>
+						<div
+							*ngFor="let certificate of certificates"
+							class="documents-main-row"
+						>
+							<app-certificate
+								[certificate]="certificate"
+							></app-certificate>
+						</div>
+					</ng-container>
+					<p class="course__title" *ngIf="sessions.length">
+						Купити курс
+					</p>
+					<div
+						*ngFor="let session of sessions"
+						class="documents-main-row"
+					>
+						<app-session [session]="session"></app-session>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
