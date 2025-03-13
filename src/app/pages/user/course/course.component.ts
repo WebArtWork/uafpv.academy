@@ -9,6 +9,7 @@ import { SchoollessonService } from 'src/app/modules/schoollesson/services/schoo
 import { Schooltest } from 'src/app/modules/schooltest/interfaces/schooltest.interface';
 import { SchooltestService } from 'src/app/modules/schooltest/services/schooltest.service';
 import { UserService } from 'src/app/modules/user/services/user.service';
+import { environment } from 'src/environments/environment';
 import { CoreService, HttpService } from 'wacom';
 
 @Component({
@@ -17,6 +18,8 @@ import { CoreService, HttpService } from 'wacom';
 	standalone: false
 })
 export class CourseComponent {
+	readonly url = environment.url;
+
 	get allowedNextLesson(): boolean {
 		return this.testsIds.every((_id) =>
 			this.certificate.tests.includes(_id)

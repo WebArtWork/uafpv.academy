@@ -1,6 +1,6 @@
 <div class="courses-wrapper" (click)="go()">
 	<div class="courses-img">
-		<img [src]="scs.doc(session.course).thumb" alt="" />
+		<img [src]="url + scs.doc(session.course).thumb" alt="" />
 	</div>
 	<div class="courses-text">
 		<div class="documents__title">{{scs.doc(session.course).name}}</div>
@@ -109,9 +109,10 @@
 
 		<wbutton
 			*ngIf="userService.user.email"
-			(click)="participate(); $event.stopPropagation()"
+			(click)="buy(); $event.stopPropagation()"
 			class="courses__btn"
-			>{{scs.doc(session.course).cost}} грн</wbutton
-		>
+			>{{scs.doc(session.course).cost ? scs.doc(session.course).cost +
+			'грн' : 'Common.Free' | translate}}
+		</wbutton>
 	</div>
 </div>

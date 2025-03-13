@@ -1,6 +1,6 @@
 <div class="courses-wrapper" (click)="go()">
 	<div class="courses-img">
-		<img [src]="scs.doc(certificate.course).thumb" alt="" />
+		<img [src]="url + scs.doc(certificate.course).thumb" alt="" />
 	</div>
 	<div class="courses-text">
 		<div class="documents__title">{{scs.doc(certificate.course).name}}</div>
