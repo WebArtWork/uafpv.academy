@@ -1,23 +1,29 @@
 <div class="documents-main-row">
 	<div *ngIf="course.learning?.length">
 		<h2 translate>Course.Що ви дізнаєтесь</h2>
-	
+
 		<div>
-			<div *ngFor="let learn of course.learning">{{learn}}</div>
+			<div *ngFor="let learn of course.learning">
+				<h3>{{learn|split}}</h3>
+				<div>{{learn|split:1}}</div>
+			</div>
 		</div>
 	</div>
-	
+
 	<div *ngIf="course.included?.length">
 		<h2 translate>Course.Цей курс включає в себе</h2>
-	
+
 		<div>
-			<div *ngFor="let include of course.included">{{include}}</div>
+			<div *ngFor="let include of course.included">
+				<h3>{{include|split}}</h3>
+				<div>{{include|split:1}}</div>
+			</div>
 		</div>
 	</div>
-	
+
 	<div *ngIf="course.included?.length">
 		<h2 translate>Course.Зміст курсу</h2>
-	
+
 		<div>
 			<div
 				*ngFor="let lesson of lessons"
@@ -28,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div *ngIf="course.suggestedCourse">
 		Перед проходженням цього курсу рекомендується спочатку пройти
 		{{scs.doc(course.suggestedCourse).name}}, щоб краще ознайомитися з
@@ -36,19 +42,20 @@
 	</div>
 	<div *ngIf="course.requiredCourse">
 		Для проходження цього курсу необхідно спочатку завершити
-		{{scs.doc(course.requiredCourse).name}}, оскільки він містить важливі базові
-		знання.
+		{{scs.doc(course.requiredCourse).name}}, оскільки він містить важливі
+		базові знання.
 	</div>
-	
+
 	<div *ngIf="course.requirements?.length">
 		<h2 translate>Course.Вимоги до цього курсу</h2>
-	
+
 		<div>
 			<div *ngFor="let requirement of course.requirements">
-				{{requirement}}
+				<h3>{{requirement|split}}</h3>
+				<div>{{requirement|split:1}}</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<div [innerHTML]="course.description"></div>
 </div>

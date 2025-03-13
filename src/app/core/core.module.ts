@@ -13,6 +13,7 @@ import { SelectModule } from './modules/select/select.module';
 import { FormModule } from './modules/form/form.module';
 import { CertificateComponent } from './components/certificate/certificate.component';
 import { RouterModule } from '@angular/router';
+import { SplitPipe } from './pipes/split.pipe';
 /* imports */
 
 const components: Type<any>[] = [
@@ -26,6 +27,7 @@ const selectors: Type<any>[] = [
 
 const pipes: Type<any>[] = [
 	/* pipes */
+	SplitPipe
 ];
 
 @NgModule({
