@@ -1,36 +1,36 @@
 <div class="documents-main-row">
 	<div *ngIf="course.learning?.length">
-		<h2 translate>Course.Що ви дізнаєтесь</h2>
+		<h2 class="learn__main-title" translate>Course.Що ви дізнаєтесь</h2>
 
 		<div>
 			<div *ngFor="let learn of course.learning">
-				<h3>{{learn|split}}</h3>
-				<div>{{learn|split:1}}</div>
+				<h3 class="learn__title">{{learn|split}}</h3>
+				<div class="learn__description">{{learn|split:1}}</div>
 			</div>
 		</div>
 	</div>
 
 	<div *ngIf="course.included?.length">
-		<h2 translate>Course.Цей курс включає в себе</h2>
+		<h2 class="learn__main-title" translate>Course.Цей курс включає в себе</h2>
 
 		<div>
-			<div *ngFor="let include of course.included">
-				<h3>{{include|split}}</h3>
-				<div>{{include|split:1}}</div>
+			<div *ngFor="let include of course.included" class="learn__block">
+				<h3 class="learn__title">{{include|split}}</h3>
+				<div class="learn__description">{{include|split:1}}</div>
 			</div>
 		</div>
 	</div>
 
 	<div *ngIf="course.included?.length">
-		<h2 translate>Course.Зміст курсу</h2>
+		<h2 class="learn__main-title" translate>Course.Зміст курсу</h2>
 
 		<div>
 			<div
 				*ngFor="let lesson of lessons"
 				(click)="selectLesson.emit(lesson._id)"
 			>
-				<div>{{lesson.name}}</div>
-				<div>{{lesson.shortDescription}}</div>
+				<div class="learn__lesson-title">{{lesson.name}}</div>
+				<div class="learn__lesson-description">{{lesson.shortDescription}}</div>
 			</div>
 		</div>
 	</div>
@@ -47,12 +47,12 @@
 	</div>
 
 	<div *ngIf="course.requirements?.length">
-		<h2 translate>Course.Вимоги до цього курсу</h2>
+		<h2 class="learn__main-title" translate>Course.Вимоги до цього курсу</h2>
 
 		<div>
 			<div *ngFor="let requirement of course.requirements">
-				<h3>{{requirement|split}}</h3>
-				<div>{{requirement|split:1}}</div>
+				<h3 class="learn__title">{{requirement|split}}</h3>
+				<div class="learn__description">{{requirement|split:1}}</div>
 			</div>
 		</div>
 	</div>

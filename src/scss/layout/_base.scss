@@ -276,7 +276,7 @@ wform {
 }
 
 .burger::before {
-	top: 2px;
+	top: 4px;
 }
 
 .burger:after {
@@ -354,8 +354,8 @@ wform {
 			position: absolute;
 			right: 10px;
 			top: 10px;
-			svg{
-				fill:var(--c-text-primary);
+			span{
+				color:var(--c-text-primary);
 			}
 		}
 		&-content {
@@ -453,8 +453,8 @@ wform {
 		}
 	}
 	&__title {
-		font-size: 20px;
-		font-weight: 600;
+		font-size: 26px;
+		font-weight: 700;
 		padding-bottom: 10px;
 		color: var(--c-text-primary);
 	}
@@ -542,7 +542,8 @@ wform {
 		transition: all 0.3s;
 		overflow: hidden;
 		&--open {
-			height: calc(100% - 75px);
+			height: calc(100% - 60px);
+			z-index: 99;
 		}
 	}
 	.documents-sidebar-content {

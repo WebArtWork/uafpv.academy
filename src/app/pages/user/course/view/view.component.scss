@@ -1,0 +1,26 @@
+.learn{
+    &__main-title{
+        font-size: 26px;
+        font-weight: 800;
+    }
+    &__title{
+        font-size: 22px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    &__lesson-title{
+        font-size: 22px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .learn__main-title{
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .learn__lesson-title{
+        font-size: 22px;
+    }
+}
