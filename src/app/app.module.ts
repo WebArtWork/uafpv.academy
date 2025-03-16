@@ -117,6 +117,7 @@ const routes: Routes = [
 		redirectTo: '/courses',
 		pathMatch: 'full'
 	},
+	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{
 		path: '',
 		canActivate: [GuestGuard],
