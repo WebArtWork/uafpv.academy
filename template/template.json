@@ -1,10 +1,10 @@
 {
-	"title": "Title which will fit on all pages",
-	"description": "Description which will fit on all pages",
+	"title": "Українська FPV Академія | Навчання польотам на FPV дронах",
+	"description": "Приєднуйтеся до Української FPV Академії та освоюйте польоти на FPV дронах з професійними інструкторами. Доступ до навчальних матеріалів і практичних занять на uafpv.academy!",
+	"image": "https://uafpv.academy/assets/image.webp",
 	"keywords": "waw, web art work, server render, template",
 	"prefix": "/template",
 	"favicon": "img/favicon.ico",
-	"image": "https://webartwork.github.io/wjst-default/img/avatar.png",
 	"author": "Honchar Denys",
 	"scss": "scss/index.scss",
 	"items": [
