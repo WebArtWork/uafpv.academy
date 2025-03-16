@@ -1,614 +1,3 @@
-<!--
-
-
-
-
-
-<style>
-	/* General Reset and Base Styling */
-	body {
-		margin: 0;
-		font-family: "Poppins", sans-serif;
-		background-color: #1b1d17;
-		color: #fff;
-		line-height: 1.6;
-	}
-
-	img {
-		max-width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	/* Header */
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px;
-		background-color: #202020;
-		position: sticky;
-		top: 0;
-		z-index: 10;
-	}
-
-	header img {
-		height: 60px;
-	}
-
-	nav {
-		display: flex;
-		gap: 15px;
-	}
-
-	nav a {
-		color: #ffa500;
-		text-decoration: none;
-		font-size: 18px;
-	}
-
-	.qr-container {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 10px;
-	}
-
-	.qr-container .card-number {
-		cursor: pointer;
-		color: #ffa500;
-		font-size: 14px;
-	}
-
-	/* Hero Section */
-	.hero {
-		text-align: center;
-		padding: 50px 20px;
-		background-image: url("background.jpg");
-		background-size: cover;
-		background-position: center;
-		color: #fff;
-	}
-
-	.hero h1 {
-		font-size: 2.5rem;
-		margin-bottom: 20px;
-	}
-
-	.hero div {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 15px;
-		margin-bottom: 20px;
-	}
-
-	.hero img {
-		width: 150px;
-	}
-
-	.hero button {
-		padding: 10px 20px;
-		background-color: #ffa500;
-		border: none;
-		color: #000;
-		cursor: pointer;
-		font-size: 16px;
-		border-radius: 5px;
-	}
-
-	/* Support Section */
-	.support {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-		padding: 50px 20px;
-		gap: 20px;
-	}
-
-	.support p {
-		flex: 1;
-		max-width: 60%;
-	}
-
-	.support img {
-		flex: 1;
-		max-width: 20%; /* Reduced QR size */
-		height: auto;
-		cursor: pointer;
-	}
-
-	@media (max-width: 768px) {
-		.support {
-			flex-direction: column;
-		}
-
-		.support p,
-		.support img {
-			max-width: 100%;
-			text-align: center;
-		}
-	}
-
-	/* About Section */
-	.about {
-		text-align: center;
-		padding: 50px 20px;
-	}
-
-	.about div {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 15px;
-		margin-top: 20px;
-	}
-
-	.about img {
-		width: 200px;
-	}
-
-	/* Courses Section */
-	.courses {
-		text-align: center;
-		padding: 50px 20px;
-	}
-
-	.courses ul {
-		list-style: none;
-		padding: 0;
-		margin: 20px 0;
-	}
-
-	.courses ul li {
-		margin: 10px 0;
-	}
-
-	.courses ul li a {
-		color: #ffa500;
-		text-decoration: none;
-		font-size: 18px;
-	}
-
-	.courses div {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 15px;
-		margin-top: 20px;
-	}
-
-	.courses img {
-		width: 250px;
-	}
-
-	/* Team Section */
-	.team {
-		text-align: center;
-		padding: 50px 20px;
-	}
-
-	.team .member {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		margin: 20px;
-	}
-
-	.team .member img {
-		width: 200px;
-		border-radius: 50%;
-		margin-bottom: 10px;
-	}
-
-	.team .member h3 {
-		font-size: 18px;
-		margin: 5px 0;
-	}
-
-	.team .member p {
-		font-size: 14px;
-	}
-
-	/* Contact Section */
-	.contact {
-		text-align: center;
-		padding: 50px 20px;
-	}
-
-	.contact form {
-		max-width: 400px;
-		margin: 0 auto;
-	}
-
-	.contact input {
-		width: 100%;
-		padding: 10px;
-		margin: 10px 0;
-		border: 1px solid #ffa500;
-		border-radius: 5px;
-		background-color: transparent;
-		color: #fff;
-	}
-
-	.contact button {
-		padding: 10px 20px;
-		background-color: #ffa500;
-		border: none;
-		color: #000;
-		cursor: pointer;
-		font-size: 16px;
-		border-radius: 5px;
-	}
-
-	/* Footer */
-	.footer {
-		padding: 20px;
-		background-color: #202020;
-		text-align: center;
-	}
-
-	.footer__text {
-		color: #6c757d;
-		font-size: 14px;
-	}
-
-	.footer-wrap {
-		margin-top: 20px;
-	}
-
-	.footer__link {
-		color: #ffa500;
-		text-decoration: none;
-		margin: 0 5px;
-	}
-
-	.footer__link:hover {
-		text-decoration: underline;
-	}
-
-	/* Responsive Adjustments */
-	@media (max-width: 768px) {
-		header {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		nav {
-			flex-direction: column;
-			gap: 10px;
-		}
-
-		.hero h1 {
-			font-size: 2rem;
-		}
-
-		.hero img {
-			width: 120px;
-		}
-
-		.about img,
-		.courses img {
-			width: 150px;
-		}
-
-		.team .member img {
-			width: 150px;
-		}
-
-		.footer-wrap {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-		}
-	}
-</style>
-
-<header>
-	<img src="img/logo.svg" alt="UA FPV Logo" />
-	<nav>
-		<a href="/#about">Про нас</a>
-		<a href="/#courses">Програма курсу</a>
-		<a href="/#team">Наша команда</a>
-		<a href="/#contact">Контакти</a>
-	</nav>
-	<div class="qr-container">
-		<span
-			class="card-number"
-			onclick="navigator.clipboard.writeText('4441 1111 2080 8674'); alert('Номер картки скопійовано!');"
-			>4441 1111 2080 8674</span
-		>
-	</div>
-</header>
-
-<section class="hero">
-	<h1>Академія для операторів FPV дронів</h1>
-	<div>
-		<img id="imageMain" src="img/gallery/pilot1.jpg" alt="Main Image" />
-	</div>
-	<script>
-		const imagesMain = [
-			"img/gallery/pilot1.jpg",
-			"img/gallery/pilot2.jpg",
-			"img/gallery/pilot3.jpg",
-			"img/gallery/pilot4.jpg",
-			"img/gallery/pilot5.jpg",
-			"img/gallery/pilot6.jpg",
-			"img/gallery/pilot7.jpg",
-			"img/gallery/pilot8.jpg",
-			"img/gallery/pilot9.jpg",
-			"img/gallery/pilot10.jpg",
-		];
-
-		let indexMain = 0;
-
-		setInterval(() => {
-			indexMain++;
-
-			if (indexMain === imagesMain.length) {
-				indexMain = 0;
-			}
-
-			document.getElementById("imageMain").src = imagesMain[index];
-		}, 5000);
-	</script>
-	<p>
-		Мета нашої академії – забезпечити якісну підготовку з керування
-		FPV-дронами для всіх охочих: від новачків до професійних пілотів. Ми
-		створюємо комфортний простір для навчання та надаємо досвідчених
-		викладачів, щоб зробити процес освоєння FPV максимально захопливим та
-		ефективним. У нашій академії ви не лише вдосконалите навички
-		пілотування, а й опануєте додаткові аспекти, такі як стратегія польоту
-		та тактичне планування.
-	</p>
-	<button onclick="window.location.href='/sign'">
-		ПЕРШИЙ КУРС БЕЗКОШТОВНИЙ
-	</button>
-	<button onclick="window.location.href='/sign'">Записатись</button>
-</section>
-
-<section id="support" class="support">
-	<h2>Підтримайте розвиток Української FPV Академії!</h2>
-	<p>
-		Ваш внесок допоможе нам забезпечити студентів якісним обладнанням:
-		дронами, батареями, зарядними пристроями та всім необхідним для
-		навчання. Разом ми розвиваємо FPV-спільноту, відкриваємо нові можливості
-		та формуємо майбутнє професійних пілотів! Долучайтеся до змін вже
-		сьогодні!
-	</p>
-	<img
-		src="img/mono.jpg"
-		alt="Donate QR"
-		onclick="window.open('https://send.monobank.ua/jar/6FLJQknfB2', '_blank')"
-	/>
-</section>
-
-<section id="about" class="about section">
-	<h2>Про нас</h2>
-	<p>
-		Українська FPV Академія – це місце, де технології, навички та пристрасть
-		до дронів об'єднуються. Ми навчаємо керуванню FPV-дронами на всіх
-		рівнях: від перших кроків у пілотуванні до професійного використання у
-		зйомці, роботі та хобі.
-	</p>
-	<p>
-		Наша академія забезпечує не лише якісну теоретичну підготовку, а й
-		практичні тренування з використанням сучасного обладнання. Завдяки
-		досвідченим інструкторам, структурованим курсам та інтерактивному
-		підходу навчання стає ефективним, захопливим і доступним для кожного.
-	</p>
-	<p>
-		Ми створюємо спільноту пілотів, які не просто керують дронами, а
-		розширюють можливості FPV-технологій, відкриваючи нові горизонти.
-		Приєднуйтесь до нас і станьте частиною майбутнього FPV!
-	</p>
-	<div>
-		<img id="imagesAbout" src="img/gallery/h1.jpg" alt="image About" />
-	</div>
-	<script>
-		const imagesAbout = [
-			"img/gallery/h1.jpg",
-			"img/gallery/h2.jpg",
-			"img/gallery/h3.jpg",
-			"img/gallery/h4.jpg",
-			"img/gallery/h5.jpg",
-			"img/gallery/h6.jpg",
-			"img/gallery/h7.jpg",
-		];
-
-		let indexAbout = 0;
-
-		setInterval(() => {
-			indexAbout++;
-
-			if (indexAbout === imagesAbout.length) {
-				indexAbout = 0;
-			}
-
-			document.getElementById("imageAbout").src = imagesAbout[index];
-		}, 5000);
-	</script>
-	<button onclick="window.location.href='/sign'">Записатись</button>
-</section>
-
-<section id="forwho" class="about section">
-	<h2>Для кого</h2>
-	<h3>Цивільні</h3>
-	<p>
-		Наша академія відкрита для всіх, хто хоче опанувати навички
-		FPV-пілотування — як для власного розвитку та хобі, так і для
-		професійної діяльності. Ви зможете навчитися керувати дронами для
-		зйомки, роботи чи навіть підготовки до служби у війську.
-	</p>
-	<h3>Військові</h3>
-	<p>
-		Ми допомагаємо військовим та тим, хто планує долучитися до ЗСУ, освоїти
-		FPV-дрони для виконання тактичних завдань. Навчання включає як базові
-		навички пілотування, так і практичні тренування, необхідні для
-		ефективного використання дронів у бойових умовах.
-	</p>
-	<button onclick="window.location.href='/sign'">Записатись</button>
-</section>
-
-<section id="courses" class="courses section">
-	<h2>Програма курсу</h2>
-	<p>
-		Програма включає три курси, які забезпечують повне навчання та практичні
-		навички роботи з FPV дронами:
-	</p>
-	<ul>
-		<li>
-			<a href="/sign">Курс 1: Основи FPV дронів</a>
-			<p>
-				Основні компоненти FPV-дрона: Конструкція дрона та взаємодія
-				його складових. Типи FPV-дронів: Класифікація, особливості та
-				призначення різних моделей. Логіка управління дроном: Принципи
-				керування за допомогою джойстика. Симулятор Liftoff: перші
-				кроки: Освоєння базових навичок польоту у віртуальному
-				середовищі.
-			</p>
-		</li>
-		<li>
-			<a href="/sign"
-				>Курс 2: Практика польотів в симуляторі та дроном FPV 3*</a
-			>
-			<h3>Практика:</h3>
-			<p>
-				Польоти на симуляторі: Безпечне тренування навичок керування
-				FPV-дроном. Польоти на 3-дюймовому дроні: Практичні навички
-				керування компактним FPV-дроном.
-			</p>
-			<h3>Теорія:</h3>
-			<p>
-				Компоненти FPV-дрона: Детальний розбір основних частин дрона та
-				їхньої взаємодії. Сигнал керування: Принципи зв’язку між пілотом
-				і дроном, типи сигналів. Батарея: Основи роботи з
-				LiPo-акумуляторами: типи, характеристики, безпека. Сигнал
-				відеозв’язку: Аналогові та цифрові системи FPV, дальність і
-				якість зв’язку. Антени: Види антен, їхнє розташування та вплив
-				на сигнал. BetaFlight налаштування: Основні параметри для
-				стабільного та точного польоту.
-			</p>
-		</li>
-		<li>
-			<a href="/sign">Курс 3: Практика польотів в ангарі дроном FPV 5*</a>
-			<p>
-				Польоти в ангарі на 5-дюймовому дроні: Цей етап навчання
-				проходитиме у великому ангарі, спеціально облаштованому для
-				FPV-польотів. Тут на вас чекатимуть різноманітні перепони,
-				конструкції та багаторівневі маршрути, які імітують реальні
-				умови польоту. Ви навчитеся маневрувати у складних просторах,
-				уникати перешкод, контролювати швидкість і відточувати точність
-				рухів. Це ідеальне середовище для покращення реакції та навичок
-				керування дронами.
-			</p>
-		</li>
-	</ul>
-	<div>
-		<img
-			id="imagesCourse"
-			src="img/gallery/drone1.jpg"
-			alt="image course"
-		/>
-	</div>
-	<script>
-		const imagesCourse = [
-			"img/gallery/drone1.jpg",
-			"img/gallery/drone2.jpg",
-			"img/gallery/drone3.jpg",
-			"img/gallery/drone4.jpg",
-			"img/gallery/drone5.jpg",
-			"img/gallery/drone6.jpg",
-			"img/gallery/drone7.jpg",
-			"img/gallery/drone8.jpg",
-			"img/gallery/drone9.jpg",
-		];
-
-		let indexCourse = 0;
-
-		setInterval(() => {
-			indexCourse++;
-
-			if (indexCourse === imagesCourse.length) {
-				indexCourse = 0;
-			}
-
-			document.getElementById("imageCourse").src = imagesCourse[index];
-		}, 5000);
-	</script>
-</section>
-
-<section id="team" class="team">
-	<h2>Наша команда</h2>
-	<div
-		style="
-			width: 100%;
-			display: flex;
-			align-items: center; /* Aligns children vertically */
-			justify-content: center; /* Aligns children horizontally */
-			height: 100%; /* Ensure the parent has height if needed */
-			text-align: center; /* Optional for inline text alignment */
-		"
-	>
-		<div class="member">
-			<img src="img/gallery/member1.jpg" alt="Team Member" />
-			<h3>Денис</h3>
-			<p>*</p>
-		</div>
-	</div>
-</section>
-
-<section id="contact" class="contact">
-	<h2>Запис на консультацію</h2>
-	<form id="contactForm">
-		<input type="text" name="name" placeholder="Ваше ім'я" required />
-		<input type="tel" name="phone" placeholder="Номер телефону" required />
-		<input type="email" name="email" placeholder="Пошта" required />
-		<button type="submit">Записатись</button>
-	</form>
-	<script>
-		document
-			.getElementById("contactForm")
-			.addEventListener("submit", function (event) {
-				event.preventDefault();
-				const formData = new FormData(this);
-				fetch("/contact", {
-					method: "POST",
-					body: formData,
-				})
-					.then(() => {
-						alert("Ми зв’яжемося з вами");
-					})
-					.catch(() => {
-						alert("Виникла помилка. Спробуйте ще раз.");
-					});
-			});
-	</script>
-</section>
-
-<footer class="footer">
-	<p class="footer__text">
-		<span class="footer__text-part"
-			>UA FPV Academy is copyright ©2025 Web Art Work</span
-		>
-		<span class="footer__text-part"> Architected by Honchar Denys</span>
-	</p>
-	<div class="footer-wrap">
-		<div class="footer__item-link">
-			<div class="footer__link-title">Кам'янець Подільський</div>
-			<a href="/courses" class="footer__link">PHONE</a>
-			<a href="/courses" class="footer__link">INSTAGRAM</a>
-		</div>
-	</div>
-</footer>
-
-
-
-
--->
-
 <div class="wrapper">
 	<div class="content">
 		<div class="first-section">
@@ -622,10 +11,10 @@
 							<div class="burger"></div>
 						</div>
 						<ul class="header__navigation">
-							<li><a href="https://uafpv.academy/courses">Наші курси</a></li>
+							<li><a href="/#/courses">Наші курси</a></li>
 						</ul>
 						<div class="header__btn">
-							<a href="/courses" class="btn-header">
+							<a href="/#/courses" class="btn-header">
 								ЗАПИСАТИСЬ
 							</a>
 						</div>
@@ -660,7 +49,7 @@
 								</a>
 							</div>
 							<div class="welcome-text__btn">
-								<a href="/courses" class="btn"> ЗАПИСАТИСЬ </a>
+								<a href="/#/courses" class="btn"> ЗАПИСАТИСЬ </a>
 							</div>
 						</div>
 						<div class="welcome-img">
@@ -696,7 +85,7 @@
 							</p>
 						</div>
 						<div class="about__btn">
-							<a href="/courses" class="btn"> ЗАПИСАТИСЬ </a>
+							<a href="/#/courses" class="btn"> ЗАПИСАТИСЬ </a>
 						</div>
 					</div>
 					<div class="about-img">
@@ -755,7 +144,7 @@
 									ВАРТІСТЬ: 8000грн
 								</div>
 								<div class="header__btn">
-									<a href="/courses" class="btn-header">
+									<a href="/#/courses" class="btn-header">
 										ЗАПИСАТИСЬ
 									</a>
 								</div>
@@ -783,7 +172,7 @@
 									ВАРТІСТЬ: 8000грн
 								</div>
 								<div class="header__btn">
-									<a href="/courses" class="btn-header">
+									<a href="/#/courses" class="btn-header">
 										ЗАПИСАТИСЬ
 									</a>
 								</div>
@@ -866,7 +255,7 @@
 							<span>натискай на кнопку та заповнюй анкету.</span>
 						</div>
 						<div class="modules-concult-text__btn">
-							<a href="/courses" class="btn"> ЗАПИСАТИСЬ </a>
+							<a href="/#/courses" class="btn"> ЗАПИСАТИСЬ </a>
 						</div>
 					</div>
 					<div class="modules-concult-img">
@@ -960,28 +349,28 @@
 						</div>
 						<div class="contact-text-socials">
 							<a
-								href="/courses"
+								href="/#/courses"
 								class="contact-text-socials__link"
 							>
 								<img src="img/icon/phone.svg" alt="" />
 								<span>+3806666666</span>
 							</a>
 							<a
-								href="/courses"
+								href="/#/courses"
 								class="contact-text-socials__link"
 							>
 								<img src="img/icon/phone.svg" alt="" />
 								<span>+3806666666</span>
 							</a>
 							<a
-								href="/courses"
+								href="/#/courses"
 								class="contact-text-socials__link"
 							>
 								<img src="img/icon/phone.svg" alt="" />
 								<span>+3806666666</span>
 							</a>
 							<a
-								href="/courses"
+								href="/#/courses"
 								class="contact-text-socials__link"
 							>
 								<img src="img/icon/phone.svg" alt="" />
@@ -1032,25 +421,25 @@
 				<div class="footer-links">
 					<div class="footer-links-column">
 						<div class="footer-links__title">Title of links</div>
-						<a href="/courses" class="footer-links__item"
+						<a href="/#/courses" class="footer-links__item"
 							>Link for that</a
 						>
-						<a href="/courses" class="footer-links__item"
+						<a href="/#/courses" class="footer-links__item"
 							>Link for that</a
 						>
-						<a href="/courses" class="footer-links__item"
+						<a href="/#/courses" class="footer-links__item"
 							>Link for that</a
 						>
 					</div>
 					<div class="footer-links-column">
 						<div class="footer-links__title">Title of links</div>
-						<a href="/courses" class="footer-links__item"
+						<a href="/#/courses" class="footer-links__item"
 							>Link for that</a
 						>
-						<a href="/courses" class="footer-links__item"
+						<a href="/#/courses" class="footer-links__item"
 							>Link for that</a
 						>
-						<a href="/courses" class="footer-links__item"
+						<a href="/#/courses" class="footer-links__item"
 							>Link for that</a
 						>
 					</div>
@@ -1058,16 +447,16 @@
 			</div>
 			<div class="footer__item footer__item-end">
 				<div class="footer-socials">
-					<a href="/courses">
+					<a href="/#/courses">
 						<img src="img/icon/phone.svg" alt="" />
 					</a>
-					<a href="/courses">
+					<a href="/#/courses">
 						<img src="img/icon/phone.svg" alt="" />
 					</a>
-					<a href="/courses">
+					<a href="/#/courses">
 						<img src="img/icon/phone.svg" alt="" />
 					</a>
-					<a href="/courses">
+					<a href="/#/courses">
 						<img src="img/icon/phone.svg" alt="" />
 					</a>
 				</div>
