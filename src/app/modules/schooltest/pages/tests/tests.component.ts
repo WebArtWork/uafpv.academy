@@ -24,7 +24,7 @@ export class TestsComponent {
 		);
 	}
 
-	columns = ['title', 'duration'];
+	columns = ['_id', 'title', 'duration'];
 
 	moduleType = this._router.url.includes('/tests/')
 		? this._router.url.split('/')[this._router.url.split('/').length - 2]
