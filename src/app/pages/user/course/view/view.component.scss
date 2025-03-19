@@ -1,4 +1,21 @@
 .learn{
+    &-block{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &__img{
+            display: flex;
+            flex: 0 0 45px;
+            color: var(--c-primary);
+            margin-right: 10px;
+            span{
+                font-size: 45px;
+            }
+        }
+        &__text{
+            flex: 1 0;
+        }
+    }
     &__main-title{
         font-size: 26px;
         font-weight: 800;
@@ -6,13 +23,14 @@
     &__title{
         font-size: 22px;
         font-weight: 700;
-        margin: 10px 0;
+        margin: 0;
     }
     &__lesson-title{
         font-size: 22px;
         font-weight: 700;
-        margin: 10px 0;
+        margin: 0;
     }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -22,5 +40,8 @@
     }
     .learn__lesson-title{
         font-size: 22px;
+    }
+    .learn-block{
+        align-items: self-start;
     }
 }
