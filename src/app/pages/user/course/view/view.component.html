@@ -3,9 +3,14 @@
 		<h2 class="learn__main-title" translate>Course.Що ви дізнаєтесь</h2>
 
 		<div>
-			<div *ngFor="let learn of course.learning">
-				<h3 class="learn__title">{{learn|split}}</h3>
-				<div class="learn__description">{{learn|split:1}}</div>
+			<div *ngFor="let learn of course.learning" class="learn-block">
+				<div class="learn-block__img">
+					<span class="material-icons">check_circle</span>
+				</div>
+				<div class="learn-block__text">
+					<h3 class="learn__title">{{learn|split}}</h3>
+					<div class="learn__description">{{learn|split:1}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -14,9 +19,14 @@
 		<h2 class="learn__main-title" translate>Course.Цей курс включає в себе</h2>
 
 		<div>
-			<div *ngFor="let include of course.included" class="learn__block">
-				<h3 class="learn__title">{{include|split}}</h3>
-				<div class="learn__description">{{include|split:1}}</div>
+			<div *ngFor="let include of course.included" class="learn-block">
+				<div class="learn-block__img">
+					<span class="material-icons">check_circle</span>
+				</div>
+				<div class="learn-block__text">
+					<h3 class="learn__title">{{include|split}}</h3>
+					<div class="learn__description">{{include|split:1}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -28,9 +38,15 @@
 			<div
 				*ngFor="let lesson of lessons"
 				(click)="selectLesson.emit(lesson._id)"
+				class="learn-block"
 			>
-				<div class="learn__lesson-title">{{lesson.name}}</div>
-				<div class="learn__lesson-description">{{lesson.shortDescription}}</div>
+				<div class="learn-block__img">
+					<span class="material-icons">check_circle</span>
+				</div>
+				<div class="learn-block__text">
+					<div class="learn__lesson-title">{{lesson.name}}</div>
+					<div class="learn__lesson-description">{{lesson.shortDescription}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -50,9 +66,14 @@
 		<h2 class="learn__main-title" translate>Course.Вимоги до цього курсу</h2>
 
 		<div>
-			<div *ngFor="let requirement of course.requirements">
-				<h3 class="learn__title">{{requirement|split}}</h3>
-				<div class="learn__description">{{requirement|split:1}}</div>
+			<div *ngFor="let requirement of course.requirements" class="learn-block">
+				<div class="learn-block__img">
+					<span class="material-icons">check_circle</span>
+				</div>
+				<div class="learn-block__text">
+					<h3 class="learn__title">{{requirement|split}}</h3>
+					<div class="learn__description">{{requirement|split:1}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
