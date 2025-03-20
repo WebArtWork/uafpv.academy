@@ -74,6 +74,7 @@
 					<app-lesson
 						*ngIf="show === 'lesson' && lesson && certificate"
 						[certificate]="certificate"
+						(nextLesson)="nextLesson()"
 						[lesson]="lesson"
 						[tests]="tests"
 					></app-lesson>
