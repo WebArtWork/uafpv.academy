@@ -5,7 +5,7 @@
 		<div>
 			<div *ngFor="let learn of course.learning" class="learn-block">
 				<div class="learn-block__img">
-					<span class="material-icons">check_circle</span>
+					<span class="material-icons">school</span>
 				</div>
 				<div class="learn-block__text">
 					<h3 class="learn__title">{{learn|split}}</h3>
@@ -41,7 +41,7 @@
 				class="learn-block"
 			>
 				<div class="learn-block__img">
-					<span class="material-icons">check_circle</span>
+					<span class="material-icons">assignment</span>
 				</div>
 				<div class="learn-block__text">
 					<div class="learn__lesson-title">{{lesson.name}}</div>
@@ -68,7 +68,7 @@
 		<div>
 			<div *ngFor="let requirement of course.requirements" class="learn-block">
 				<div class="learn-block__img">
-					<span class="material-icons">check_circle</span>
+					<span class="material-icons">info</span>
 				</div>
 				<div class="learn-block__text">
 					<h3 class="learn__title">{{requirement|split}}</h3>
