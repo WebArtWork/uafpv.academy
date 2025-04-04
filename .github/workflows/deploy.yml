@@ -39,6 +39,7 @@ jobs:
           waw build
           cd ..
           cp template/index.html dist/app/browser/home.html
+          cp template/franchise.html dist/app/browser/franchise.html
 
       - name: Set up SSH
         env:
