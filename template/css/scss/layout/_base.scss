@@ -110,8 +110,13 @@ ul {
     background-color: #33362eb5;
     color: white;
 }
+.main-content__sections{
+	max-width: 1300px;
+	margin: 0 auto;
+}
 .header{
-	position: fixed;
+	position: sticky;
+	top: 0;
 	width: 100%;
 	z-index: 99;
 	&__logo{

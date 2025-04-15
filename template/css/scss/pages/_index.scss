@@ -33,7 +33,7 @@ body {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		padding-top: 70px;
+		padding-top: 0;
 	}
 	&-text{
 		flex:1 0;
@@ -682,7 +682,7 @@ body {
 }
 @media screen and (max-width: 479px) {
 	.welcome-wrapper {
-		padding-top: 110px;
+		padding-top: 60px;
 	}
 	.about__description {
         font-weight: 400;
