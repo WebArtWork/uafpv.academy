@@ -1,51 +1,64 @@
 <div class="documents-main-row">
 	<div *ngIf="course.learning?.length">
-		<h2 class="learn__main-title" translate>Course.Що ви дізнаєтесь</h2>
+		<div class="learn-title">
+			<div class="learn-title__img">
+				<span class="material-icons">school</span>
+			</div>
+			<h2 class="learn-title__text" translate>Course.Що ви дізнаєтесь</h2>
+		</div>
+		
 
-		<div>
-			<div *ngFor="let learn of course.learning" class="learn-block">
-				<div class="learn-block__img">
-					<span class="material-icons">school</span>
-				</div>
-				<div class="learn-block__text">
-					<h3 class="learn__title">{{learn|split}}</h3>
-					<div class="learn__description">{{learn|split:1}}</div>
+		<div class="learn-list">
+			<div *ngFor="let learn of course.learning" class="learn__wrap">
+				<div class="learn__item">
+					<div class="learn-block__text">
+						<h3 class="learn__title">{{learn|split}}</h3>
+						<div class="learn__description">{{learn|split:1}}</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div *ngIf="course.included?.length">
-		<h2 class="learn__main-title" translate>Course.Цей курс включає в себе</h2>
-
-		<div>
-			<div *ngFor="let include of course.included" class="learn-block">
-				<div class="learn-block__img">
-					<span class="material-icons">check_circle</span>
-				</div>
-				<div class="learn-block__text">
-					<h3 class="learn__title">{{include|split}}</h3>
-					<div class="learn__description">{{include|split:1}}</div>
-				</div>
+		<div class="learn-title">
+			<div class="learn-title__img">
+				<span class="material-icons">list</span>
 			</div>
+			<h2 class="learn-title__text" translate>Course.Цей курс включає в себе</h2>
 		</div>
+			<div class="include-list">
+					<div *ngFor="let include of course.included" class="include__item">
+						<div class="include__img">
+							<span class="material-icons">check_circle</span>
+						</div>
+						<div class="include__text">
+							<h3 class="include__title">{{include|split}}</h3>
+							<div class="include__description">{{include|split:1}}</div>
+						</div>
+					</div>
+			</div>
 	</div>
 
 	<div *ngIf="course.included?.length">
-		<h2 class="learn__main-title" translate>Course.Зміст курсу</h2>
-
+		<div class="learn-title content-main-title">
+			<div class="learn-title__img">
+				<span class="material-icons">assignment</span>
+			</div>
+			<h2 class="learn-title__text" translate>Course.Зміст курсу</h2>
+		</div>
 		<div>
 			<div
 				*ngFor="let lesson of lessons"
 				(click)="selectLesson.emit(lesson._id)"
-				class="learn-block"
+				class="content-list"
 			>
-				<div class="learn-block__img">
-					<span class="material-icons">assignment</span>
+				<div class="content__img">
+					<span></span>
 				</div>
-				<div class="learn-block__text">
-					<div class="learn__lesson-title">{{lesson.name}}</div>
-					<div class="learn__lesson-description">{{lesson.shortDescription}}</div>
+				<div class="content-text">
+					<div class="content-text__title">{{lesson.name}}</div>
+					<div class="content-text__description">{{lesson.shortDescription}}</div>
 				</div>
 			</div>
 		</div>
@@ -63,10 +76,14 @@
 	</div>
 
 	<div *ngIf="course.requirements?.length">
-		<h2 class="learn__main-title" translate>Course.Вимоги до цього курсу</h2>
-
+		<div class="learn-title">
+			<div class="learn-title__img">
+				<span class="material-icons">assignment_late</span>
+			</div>
+			<h2 class="learn-title__text" translate>Course.Вимоги до цього курсу</h2>
+		</div>
 		<div>
-			<div *ngFor="let requirement of course.requirements" class="learn-block">
+			<div *ngFor="let requirement of course.requirements" class="learn-block requirements-block">
 				<div class="learn-block__img">
 					<span class="material-icons">info</span>
 				</div>

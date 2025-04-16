@@ -331,7 +331,7 @@ wform {
 		}
 		&-row {
 			padding: 10px 20px;
-			background: var(--c-bg-secondary);
+			background: var(--new-bg);
 			margin-bottom: 20px;
 			border-radius: 10px;
 			color: var(--c-text-primary);
@@ -342,7 +342,7 @@ wform {
 		flex: 0 0 280px;
 		max-width: 280px;
 		width: 100%;
-		background: var(--c-bg-secondary);
+		background: var(--new-bg);
 		height: calc(100vh - 100px);
 		border-radius: 12px;
 		position: fixed;
@@ -651,7 +651,9 @@ wform {
 		flex: 0 0 100%;
 		padding: 20px 0 0 0;
 	}
-
+	.documents-main-content {
+		padding: 0;
+	}
 }
 @media screen and (max-width: 479px) {
 	.documents-triggers__wrap {
@@ -661,5 +663,8 @@ wform {
 	.documents-products__wrap{
 		flex: 0 0 100%;
 		max-width: 100%;
+	}
+	.content-main-title{
+		margin-bottom: 12px;
 	}
 }

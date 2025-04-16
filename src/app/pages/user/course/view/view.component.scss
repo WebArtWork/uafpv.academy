@@ -1,4 +1,38 @@
 .learn{
+    &-title{
+        font-size: 22px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        &__img{
+            display: flex;
+            margin-right: 15px;
+            span{
+                font-size: 46px;
+                color: var(--brown);
+            }
+        }
+        &__text{
+            flex: 1 0;
+        }
+    }
+    &-list{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__wrap{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__item{
+        border-radius: 6px;
+        background: linear-gradient(151deg, #3c3333 0%, #1e1e1e 100%);
+        border: 1px solid var(--brown);
+        padding: 12px;
+    }
     &-block{
         display: flex;
         align-items: center;
@@ -6,7 +40,7 @@
         &__img{
             display: flex;
             flex: 0 0 45px;
-            color: var(--c-primary);
+            color: var(--brown);
             margin-right: 10px;
             span{
                 font-size: 45px;
@@ -22,9 +56,11 @@
         text-transform: uppercase;
     }
     &__title{
-        font-size: 22px;
-        font-weight: 600;
-        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #dfd8c6;
+        margin: 0 0 5px 0;
+        line-height: 1.1;
     }
     &__lesson-title{
         font-size: 22px;
@@ -32,6 +68,86 @@
         margin: 0;
     }
 
+}
+
+.include{
+    &-list{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__item{
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 10px;
+        margin: 0 0 20px 0;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    &__img{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background: linear-gradient(151deg, #3c3333 0%, #1e1e1e 100%);
+        border: 1px solid var(--brown);
+        span{
+            color: var(--brown);
+        }
+    }
+    &__title{
+        color: #dfd8c6;
+        font-size: 18px;
+        margin: 15px 0 5px 0;
+        line-height: 1.1;
+    }
+}
+
+.content{
+    &-list{
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &-text{
+        flex: 1 0;
+        padding-left: 10px;
+        &__title{
+            font-weight: 600;
+            font-size: 16px;
+            color: #dfd8c6;
+            margin-bottom: 5px;
+            line-height: 1.1;
+        }
+    }
+    &__img{
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background: linear-gradient(151deg, #3c3333 0%, #1e1e1e 100%);
+        border: 1px solid var(--brown);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            display: block;
+            border-radius: 2px;
+            width: 10px;
+            height: 10px;
+            background: var(--brown);
+        }
+    }
+}
+
+.requirements-block{
+    background: linear-gradient(151deg, #3c3333 0%, #1e1e1e 100%);
+    border: 1px solid var(--brown);
+    border-radius: 8px;
+    padding: 7px;
 }
 
 @media screen and (max-width: 767px) {
@@ -49,9 +165,22 @@
     .learn__title, .learn__lesson-title{
         font-size: 20px;
         line-height: 1;
-        color: var(--learn);
         font-weight: 600;
         margin: 0;
         padding-bottom: 10px;
+    }
+    .learn-title {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+    .learn__wrap{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    .include__item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
     }
 }
