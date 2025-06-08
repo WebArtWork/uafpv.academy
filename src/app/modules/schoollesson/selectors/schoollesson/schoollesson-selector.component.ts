@@ -4,7 +4,7 @@ import {
 	Component,
 	OnChanges,
 	Output,
-	Input
+	Input,
 } from '@angular/core';
 import { SelectModule } from 'src/app/core/modules/select/select.module';
 import { SchoollessonService } from '../../services/schoollesson.service';
@@ -14,9 +14,9 @@ import { Schoollesson } from '../../interfaces/schoollesson.interface';
 	selector: 'schoollesson-selector',
 	templateUrl: './schoollesson-selector.component.html',
 	styleUrls: ['./schoollesson-selector.component.scss'],
-	imports: [SelectModule]
+	imports: [SelectModule],
 })
-export class SelectUserComponent implements OnChanges {
+export class SchoollessonSelectorComponent implements OnChanges {
 	@Input() value: string;
 
 	@Output() wChange = new EventEmitter();

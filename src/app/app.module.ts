@@ -66,8 +66,8 @@ const schoolPages = [
 			}
 		},
 		loadChildren: () =>
-			import('./modules/schoollesson/pages/lessons/lessons.module').then(
-				(m) => m.LessonsModule
+			import('./modules/schoollesson/pages/lessons/lessons.routes').then(
+				(m) => m.lessonsRoutes
 			)
 	},
 	{
