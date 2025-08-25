@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Schoolcourse } from 'src/app/modules/schoolcourse/interfaces/schoolcourse.interface';
-import { SchoolcourseService } from 'src/app/modules/schoolcourse/services/schoolcourse.service';
-import { Schoollesson } from 'src/app/modules/schoollesson/interfaces/schoollesson.interface';
+import { Schoolcourse } from 'src/app/modules/school/interfaces/schoolcourse.interface';
+import { Schoollesson } from 'src/app/modules/school/interfaces/schoollesson.interface';
+import { SchoolcourseService } from 'src/app/modules/school/services/schoolcourse.service';
 
 @Component({
 	selector: 'app-view',

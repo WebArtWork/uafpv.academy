@@ -1,21 +1,21 @@
-import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 // Core
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from 'src/app/core/core.module';
+import { AppComponent } from './app.component';
 import { GuestComponent } from './core/theme/guest/guest.component';
 import { UserComponent } from './core/theme/user/user.component';
-import { AppComponent } from './app.component';
-import { CoreModule } from 'src/app/core/core.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // config
-import { WacomModule, MetaGuard } from 'wacom';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { environment } from 'src/environments/environment';
+import { MetaGuard, WacomModule } from 'wacom';
+import { AdminsGuard } from './core/guards/admins.guard';
 import { AuthenticatedGuard } from './core/guards/authenticated.guard';
 import { GuestGuard } from './core/guards/guest.guard';
-import { AdminsGuard } from './core/guards/admins.guard';
 import { TeachersGuard } from './core/guards/teacher.guard';
 import { PublicComponent } from './core/theme/public/public.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const schoolPages = [
 	{
@@ -27,7 +27,7 @@ const schoolPages = [
 			}
 		},
 		loadChildren: () =>
-			import('./modules/schoolcourse/pages/courses/courses.module').then(
+			import('./modules/school/pages/courses/courses.module').then(
 				(m) => m.CoursesModule
 			)
 	},
@@ -40,7 +40,7 @@ const schoolPages = [
 			}
 		},
 		loadChildren: () =>
-			import('./modules/schoolknowledge/pages/levels/levels.module').then(
+			import('./modules/school/pages/levels/levels.module').then(
 				(m) => m.LevelsModule
 			)
 	},
@@ -53,9 +53,9 @@ const schoolPages = [
 			}
 		},
 		loadChildren: () =>
-			import(
-				'./modules/schoolsession/pages/sessions/sessions.module'
-			).then((m) => m.SessionsModule)
+			import('./modules/school/pages/sessions/sessions.module').then(
+				(m) => m.SessionsModule
+			)
 	},
 	{
 		path: 'lessons',
@@ -66,7 +66,7 @@ const schoolPages = [
 			}
 		},
 		loadChildren: () =>
-			import('./modules/schoollesson/pages/lessons/lessons.routes').then(
+			import('./modules/school/pages/lessons/lessons.routes').then(
 				(m) => m.lessonsRoutes
 			)
 	},
@@ -79,7 +79,7 @@ const schoolPages = [
 			}
 		},
 		loadChildren: () =>
-			import('./modules/schooltest/pages/tests/tests.module').then(
+			import('./modules/school/pages/tests/tests.module').then(
 				(m) => m.TestsModule
 			)
 	},
@@ -93,7 +93,7 @@ const schoolPages = [
 		},
 		loadChildren: () =>
 			import(
-				'./modules/schoolcertificate/pages/certificates/certificates.module'
+				'./modules/school/pages/certificates/certificates.module'
 			).then((m) => m.CertificatesModule)
 	},
 	{

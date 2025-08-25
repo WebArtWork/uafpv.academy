@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Schoolcertificate } from 'src/app/modules/schoolcertificate/interfaces/schoolcertificate.interface';
+import { Schoolcertificate } from 'src/app/modules/school/interfaces/schoolcertificate.interface';
 import { HttpService } from 'wacom';
 
 @Component({

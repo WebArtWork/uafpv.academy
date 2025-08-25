@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { AlertService, CoreService } from 'wacom';
-import { SchoolsessionService } from '../../services/schoolsession.service';
-import { Schoolsession } from '../../interfaces/schoolsession.interface';
-import { FormService } from 'src/app/core/modules/form/form.service';
-import { TranslateService } from 'src/app/core/modules/translate/translate.service';
-import { FormInterface } from 'src/app/core/modules/form/interfaces/form.interface';
-import { schoolsessionFormComponents } from '../../formcomponents/schoolsession.formcomponents';
 import { Router } from '@angular/router';
+import { FormService } from 'src/app/core/modules/form/form.service';
+import { FormInterface } from 'src/app/core/modules/form/interfaces/form.interface';
+import { TranslateService } from 'src/app/core/modules/translate/translate.service';
+import { SchoolcourseService } from 'src/app/modules/school/services/schoolcourse.service';
 import { UserService } from 'src/app/modules/user/services/user.service';
-import { SchoolcourseService } from 'src/app/modules/schoolcourse/services/schoolcourse.service';
+import { AlertService, CoreService } from 'wacom';
+import { schoolsessionFormComponents } from '../../formcomponents/schoolsession.formcomponents';
+import { Schoolsession } from '../../interfaces/schoolsession.interface';
+import { SchoolsessionService } from '../../services/schoolsession.service';
 
 @Component({
 	templateUrl: './sessions.component.html',

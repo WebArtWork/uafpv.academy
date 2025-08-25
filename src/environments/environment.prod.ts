@@ -16,7 +16,7 @@ export const environment = {
 	commerceId: '67b52db493ea4bc4b83ee807',
 	production: true,
 	appId: 'uafpv',
-	url: 'https://webart.work',
+	url: 'https://api.webart.work',
 	user: {
 		email: '',
 		password: ''

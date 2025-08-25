@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { forkJoin, from } from 'rxjs';
-import { Schoolcertificate } from 'src/app/modules/schoolcertificate/interfaces/schoolcertificate.interface';
-import { SchoolcertificateService } from 'src/app/modules/schoolcertificate/services/schoolcertificate.service';
-import { Schoolsession } from 'src/app/modules/schoolsession/interfaces/schoolsession.interface';
-import { SchoolsessionService } from 'src/app/modules/schoolsession/services/schoolsession.service';
+import { Schoolcertificate } from 'src/app/modules/school/interfaces/schoolcertificate.interface';
+import { Schoolsession } from 'src/app/modules/school/interfaces/schoolsession.interface';
+import { SchoolcertificateService } from 'src/app/modules/school/services/schoolcertificate.service';
+import { SchoolsessionService } from 'src/app/modules/school/services/schoolsession.service';
 import { UserService } from 'src/app/modules/user/services/user.service';
 import { CoreService } from 'wacom';
 

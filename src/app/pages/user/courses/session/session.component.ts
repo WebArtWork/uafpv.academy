@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Schoolcertificate } from 'src/app/modules/schoolcertificate/interfaces/schoolcertificate.interface';
-import { SchoolcertificateService } from 'src/app/modules/schoolcertificate/services/schoolcertificate.service';
-import { SchoolcourseService } from 'src/app/modules/schoolcourse/services/schoolcourse.service';
-import { Schoolsession } from 'src/app/modules/schoolsession/interfaces/schoolsession.interface';
+import { Schoolcertificate } from 'src/app/modules/school/interfaces/schoolcertificate.interface';
+import { Schoolsession } from 'src/app/modules/school/interfaces/schoolsession.interface';
+import { SchoolcertificateService } from 'src/app/modules/school/services/schoolcertificate.service';
+import { SchoolcourseService } from 'src/app/modules/school/services/schoolcourse.service';
 import { UserService } from 'src/app/modules/user/services/user.service';
 import { environment } from 'src/environments/environment';
 import { HttpService } from 'wacom';

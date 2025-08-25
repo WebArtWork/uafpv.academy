@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Schoolcertificate } from 'src/app/modules/schoolcertificate/interfaces/schoolcertificate.interface';
-import { SchoolcertificateService } from 'src/app/modules/schoolcertificate/services/schoolcertificate.service';
+import { Schoolcertificate } from 'src/app/modules/school/interfaces/schoolcertificate.interface';
+import { SchoolcertificateService } from 'src/app/modules/school/services/schoolcertificate.service';
 import { UserService } from 'src/app/modules/user/services/user.service';
 import { CoreService } from 'wacom';
 
