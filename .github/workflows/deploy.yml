@@ -37,9 +37,9 @@ jobs:
         run: |
           cd template
           waw build
+          mv index.html home.html
           cd ..
-          cp template/index.html dist/app/browser/home.html
-          cp template/franchise.html dist/app/browser/franchise.html
+          cp -r template/* dist/app/browser
 
       - name: Set up SSH
         env:
