@@ -37,18 +37,25 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__wrap">
-						<div class="header__logo">
+						<a href="/" class="header__logo">
 							<img src="img/logo.png" alt="" />
-						</div>
+						</a>
 						<div class="burger-wrap">
 							<div class="burger"></div>
 						</div>
 						<ul class="header__navigation">
-							<li><a href="/#/courses">Наші курси</a></li>
+							<!-- <li><a href="/#/courses">Спільнота</a></li> -->
+							<li><a href="/community">Спільнота</a></li>
+							<li><a href="/franchise">Франшиза</a></li>
+							<li><a href="/library">Бібліотека</a></li>
+							<li><a href="/store">Магазин</a></li>
 						</ul>
 						<div class="header__btn">
-							<a href="/#/courses" class="btn-header">
-								ЗАПИСАТИСЬ
+							<a
+								href="https://calendly.com/crackeraki/15min"
+								class="btn-header"
+							>
+								Співпраця
 							</a>
 						</div>
 					</div>
@@ -62,64 +69,93 @@
 					<div class="footer__wrap">
 						<div class="footer__item footer__item-start">
 							<img src="img/logo.png" alt="" />
+							<h3>{{{title}}}</h3>
+							<p>{{{description}}}</p>
 						</div>
 						<div class="footer__item footer__item-center">
 							<div class="footer-links">
 								<div class="footer-links-column">
-									<div class="footer-links__title">
-										Title of links
-									</div>
 									<a
-										href="/#/courses"
+										href="/community"
+										class="footer-links__title"
+									>
+										Спільнота
+									</a>
+									<a
+										href="/community-cybersport"
 										class="footer-links__item"
-										>Link for that</a
+										>Кіберспорт</a
 									>
 									<a
-										href="/#/courses"
+										href="/community-events"
 										class="footer-links__item"
-										>Link for that</a
+										>Заходи</a
 									>
 									<a
-										href="/#/courses"
+										href="/community-skyfall"
 										class="footer-links__item"
-										>Link for that</a
+										>Skyfall</a
 									>
 								</div>
 								<div class="footer-links-column">
-									<div class="footer-links__title">
-										Title of links
-									</div>
 									<a
-										href="/#/courses"
+										href="/library"
+										class="footer-links__title"
+									>
+										Бібліотека
+									</a>
+
+									{% for category in libraryCategories %}
+									<a
+										href="{{{category.url}}}"
 										class="footer-links__item"
-										>Link for that</a
+										>{{{category.name}}}</a
+									>
+									{% endfor %}
+								</div>
+								<div class="footer-links-column">
+									<a
+										href="/franchise"
+										class="footer-links__title"
+									>
+										Франшиза
+									</a>
+									<a
+										href="/franchise-crew"
+										class="footer-links__item"
+										>Команда</a
 									>
 									<a
-										href="/#/courses"
+										href="/franchise-hub"
 										class="footer-links__item"
-										>Link for that</a
+										>Хаб</a
 									>
 									<a
-										href="/#/courses"
+										href="/franchise-mentor"
 										class="footer-links__item"
-										>Link for that</a
+										>Наставник</a
+									>
+								</div>
+								<div class="footer-links-column">
+									<a
+										href="/store"
+										class="footer-links__title"
+									>
+										Магазин
+									</a>
+									<a
+										href="/store-cart"
+										class="footer-links__item"
+										>Корзина</a
 									>
 								</div>
 							</div>
 						</div>
 						<div class="footer__item footer__item-end">
 							<div class="footer-socials">
-								<a href="/#/courses">
-									<img src="img/icon/phone.svg" alt="" />
-								</a>
-								<a href="/#/courses">
-									<img src="img/icon/phone.svg" alt="" />
-								</a>
-								<a href="/#/courses">
-									<img src="img/icon/phone.svg" alt="" />
-								</a>
-								<a href="/#/courses">
-									<img src="img/icon/phone.svg" alt="" />
+								<a href="tel:+380972791202">
+									<img src="img/icon/phone.svg" alt="phone" />
+									<span>+380972791202</span>
 								</a>
 							</div>
 						</div>

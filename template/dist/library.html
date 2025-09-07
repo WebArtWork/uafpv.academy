@@ -62,7 +62,11 @@
 				</div>
 			</header>
 			<main class="main-content__sections">
-				<p>Page Store is connected</p>
+				<p>Page Library is connected</p>
+{% for category in libraryCategories %}
+<a href="{{{category.url}}}">{{{category.name}}}</a>
+{% endfor %}
+
 			</main>
 			<footer class="footer">
 				<div class="container">

@@ -1,1 +1,4 @@
 <p>Page Library is connected</p>
+{% for category in libraryCategories %}
+<a href="{{{category.url}}}">{{{category.name}}}</a>
+{% endfor %}
