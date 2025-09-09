@@ -1,4 +1,17 @@
-<p>Page Library is connected</p>
-{% for category in libraryCategories %}
-<a href="{{{category.url}}}">{{{category.name}}}</a>
-{% endfor %}
+<section>
+	<h1>Бібліотека</h1>
+	<p>
+		Збірка матеріалів про техніку та озброєння, задіяні у війні РФ проти
+		України. Тут ви знайдете короткі описи, характеристики та приклади
+		застосування.
+	</p>
+
+	<section>
+		<h1>Категорії бібліотеки</h1>
+		<ul>
+			{% for category in libraryCategories %}
+			<li><a href="{{{category.url}}}">{{{category.name}}}</a></li>
+			{% endfor %}
+		</ul>
+	</section>
+</section>

@@ -2,5 +2,12 @@
 	"port": 8000,
 	"build": {
 		"base": "/template"
-	}
+	},
+	"generate": [
+		{
+			"items": "libraryCategories",
+			"config": "library",
+			"page": "library-category"
+		}
+	]
 }

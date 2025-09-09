@@ -37,6 +37,7 @@ jobs:
         run: |
           cd template
           waw build
+          waw generate
           mv index.html home.html
           cd ..
           cp -r template/* dist/app/browser
