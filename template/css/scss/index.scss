@@ -6,6 +6,7 @@
 @use 'vendors/normalize' as vendorsNorm;
 
 @use 'pages/index';
+@use 'pages/store';
 
 // ## COMPONENTS
 @use 'components/w-btn';
@@ -28,6 +29,7 @@
 @use 'components/w-stats';
 @use 'components/w-slider';
 @use 'components/w-file';
+@use 'components/w-product-card';
 // ## ATOM
 @use 'atom/display';
 @use 'atom/margin';
