@@ -1,0 +1,26 @@
+.store {
+	margin-block: 80px;
+
+	&__title {
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 30px;
+		margin-left: -5px;
+	}
+
+	&__products {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 15px;
+		justify-items: center;
+	}
+
+	@media screen and (max-width: 479px) {
+		margin-block: 40px;
+
+		&__title {
+			font-size: 28px;
+			margin-bottom: 20px;
+		}
+	}
+}
