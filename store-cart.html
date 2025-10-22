@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="/template/" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Кошик | Завершіть своє замовлення | UA FPV Academy</title>
+		<meta itemprop="name" content="Кошик | Завершіть своє замовлення | UA FPV Academy" />
+		<meta name="twitter:title" content="Кошик | Завершіть своє замовлення | UA FPV Academy" />
+		<meta property="og:title" content="Кошик | Завершіть своє замовлення | UA FPV Academy" />
+
+		<meta name="description" content="Ви майже завершили покупку. Перевірте замовлення та підтвердьте оплату, щоб отримати продукцію й підтримати розвиток UA FPV Academy." />
+		<meta itemprop="description" content="Ви майже завершили покупку. Перевірте замовлення та підтвердьте оплату, щоб отримати продукцію й підтримати розвиток UA FPV Academy." />
+		<meta name="twitter:description" content="Ви майже завершили покупку. Перевірте замовлення та підтвердьте оплату, щоб отримати продукцію й підтримати розвиток UA FPV Academy." />
+		<meta property="og:description" content="Ви майже завершили покупку. Перевірте замовлення та підтвердьте оплату, щоб отримати продукцію й підтримати розвиток UA FPV Academy." />
+
+		<meta itemprop="image" content="https://uafpv.academy/assets/image.webp" />
+		<meta name="twitter:image:src" content="https://uafpv.academy/assets/image.webp" />
+		<meta property="og:image" content="https://uafpv.academy/assets/image.webp" />
+
+		<link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="libs/slick/slick.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="libs/slick/slick-theme.css"
+		/>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="main-contents">
+			<header class="header">
+				<div class="container">
+					<div class="header__wrap">
+						<a href="/" class="header__logo">
+							<img src="img/logo.png" alt="" />
+						</a>
+						<div class="burger-wrap">
+							<div class="burger"></div>
+						</div>
+						<ul class="header__navigation">
+							<li><a href="/community">Спільнота</a></li>
+							<li><a href="/franchise">Франшиза</a></li>
+							<li><a href="/library">Бібліотека</a></li>
+							<li><a href="/store">Магазин</a></li>
+						</ul>
+						<div class="header__btn">
+							<a
+								href="https://calendly.com/crackeraki/15min"
+								class="btn-header"
+							>
+								Співпраця
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main-content__sections">
+				<!-- <p>Ви майже на фініші! Завершіть замовлення та підтримайте UA FPV Academy.</p> -->
+<main class="cart">
+	<div class="cart__container">
+		<!-- ЛІВА ЧАСТИНА -->
+		<div class="cart__form">
+			<div class="express-checkout">
+				<h2>Швидка оплата</h2>
+				<div class="express-checkout__buttons">
+					<button class="btn shop">
+						<img src="img/icon/paypal.png" alt="Free Shipping" />
+					</button>
+					<button class="btn paypal">
+						<img
+							src="img/icon/apple-pay.png "
+							alt="Free Shipping"
+						/>
+					</button>
+					<button class="btn gpay">
+						<img src="img/icon/google.png " alt="Free Shipping" />
+					</button>
+				</div>
+			</div>
+
+			<div class="divider">АБО</div>
+
+			<form>
+				<!-- КОНТАКТНІ ДАНІ -->
+				<div class="form__section">
+					<div class="form__header">
+						<h3>Контакт</h3>
+						<a href="#">Увійти</a>
+					</div>
+					<input type="email" placeholder="Електронна пошта" />
+				</div>
+
+				<!-- ДОСТАВКА -->
+				<div class="form__section">
+					<h3>Доставка</h3>
+					<select>
+						<option>Україна</option>
+					</select>
+					<div class="form__row">
+						<input type="text" placeholder="Ім’я" />
+						<input type="text" placeholder="Прізвище" />
+					</div>
+					<input type="text" placeholder="Адреса" />
+					<input
+						type="text"
+						placeholder="Квартира, під’їзд, поверх (необов’язково)"
+					/>
+					<div class="form__row">
+						<input type="text" placeholder="Місто" />
+						<input type="text" placeholder="Область" />
+						<input type="text" placeholder="Поштовий індекс" />
+					</div>
+					<input type="text" placeholder="Телефон" />
+				</div>
+
+				<div class="form__section">
+					<h3>Спосіб доставки</h3>
+					<div class="shipping-disabled">
+						Введіть адресу доставки, щоб переглянути доступні
+						способи доставки.
+					</div>
+				</div>
+
+				<!-- ОПЛАТА -->
+				<div class="form__section">
+					<h3>Оплата</h3>
+					<p class="secure-text">
+						Усі транзакції захищені та зашифровані.
+					</p>
+
+					<label class="payment-option active">
+						<div class="payment-option__left">
+							<input type="radio" name="payment" checked />
+							<span>Банківська картка</span>
+						</div>
+						<div class="payment-icons">
+							<span>Visa</span><span>MasterCard</span
+							><span>Amex</span>
+						</div>
+					</label>
+
+					<div class="card-fields">
+						<input type="text" placeholder="Номер картки" />
+						<input type="text" placeholder="Ім’я на картці" />
+						<div class="form__row">
+							<input
+								type="text"
+								placeholder="Термін дії (MM/YY)"
+							/>
+							<input type="text" placeholder="CVV код" />
+						</div>
+					</div>
+
+					<label class="payment-option">
+						<div class="payment-option__left">
+							<input type="radio" name="payment" /> PayPal
+						</div>
+						<img src="img/icon/paypal.png" alt="paypal" />
+					</label>
+
+					<label
+						><input type="checkbox" checked /> Використовувати
+						адресу доставки як платіжну адресу</label
+					>
+
+					<div class="form__section">
+						<h4>Запам’ятати мене</h4>
+						<label>
+							<input type="checkbox" />
+							Зберегти мої дані для швидшого оформлення через
+							обліковий запис Shop
+						</label>
+					</div>
+
+					<button type="submit" class="btn paynow">СПЛАТИТИ</button>
+
+					<p class="terms">
+						Продовжуючи, ви погоджуєтесь із
+						<a href="#">Умовами використання</a> та
+						<a href="#">Політикою конфіденційності</a> Shop.
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<!-- ПРАВА ЧАСТИНА -->
+		<aside class="cart__summary">
+			<div class="item">
+				<div class="img-wrapper">
+					<img
+						src="img/products/product-1/product-1.jpg"
+						alt="Товар"
+					/>
+					<span class="quantity">1</span>
+				</div>
+				<div class="details">
+					<p class="name">
+						Футболка Box-Cut із бавовни | Темно-зелена | Кишеня
+					</p>
+					<p class="size">XXS</p>
+					<p class="price">₴790.00</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="img-wrapper">
+					<img
+						src="img/products/product-1/product-1.jpg"
+						alt="Товар"
+					/>
+					<span class="quantity">1</span>
+				</div>
+				<div class="details">
+					<p class="name">Чашка</p>
+					<p class="price">₴290</p>
+				</div>
+			</div>
+
+			<div class="discount">
+				<input type="text" placeholder="Промокод" />
+				<button>ЗАСТОСУВАТИ</button>
+			</div>
+
+			<div class="totals">
+				<div><span>Підсумок · 2 товари</span><span>₴1080</span></div>
+				<div><span>Доставка</span><span>₴100</span></div>
+				<div class="total"><span>Разом</span><span>₴1180</span></div>
+			</div>
+		</aside>
+	</div>
+</main>
+
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__wrap">
+						<div class="footer__item footer__item-start">
+							<a href="/">
+								<img src="img/logo.png" alt="logo" />
+							</a>
+							<h3>Кошик | Завершіть своє замовлення | UA FPV Academy</h3>
+							<p>Ви майже завершили покупку. Перевірте замовлення та підтвердьте оплату, щоб отримати продукцію й підтримати розвиток UA FPV Academy.</p>
+						</div>
+						<div class="footer__item footer__item-center">
+							<div class="footer-links">
+								<div class="footer-links-column">
+									<a
+										href="/community"
+										class="footer-links__title"
+									>
+										Спільнота
+									</a>
+									<a
+										href="/community-cybersport"
+										class="footer-links__item"
+										>Кіберспорт</a
+									>
+									<a
+										href="/community-events"
+										class="footer-links__item"
+										>Заходи</a
+									>
+									<a
+										href="/community-skyfall"
+										class="footer-links__item"
+										>Skyfall</a
+									>
+								</div>
+								<div class="footer-links-column">
+									<a
+										href="/library"
+										class="footer-links__title"
+									>
+										Бібліотека
+									</a>
+
+									
+									<a
+										href="/aircrafts"
+										class="footer-links__item"
+										>Авіація</a
+									>
+									
+									<a
+										href="/arms"
+										class="footer-links__item"
+										>Зброя</a
+									>
+									
+									<a
+										href="/artillery"
+										class="footer-links__item"
+										>Артилерія</a
+									>
+									
+									<a
+										href="/defense"
+										class="footer-links__item"
+										>Оборона</a
+									>
+									
+									<a
+										href="/drones"
+										class="footer-links__item"
+										>Дрони</a
+									>
+									
+								</div>
+								<div class="footer-links-column">
+									<a
+										href="/franchise"
+										class="footer-links__title"
+									>
+										Франшиза
+									</a>
+									<a
+										href="/franchise-crew"
+										class="footer-links__item"
+										>Команда</a
+									>
+									<a
+										href="/franchise-hub"
+										class="footer-links__item"
+										>Хаб</a
+									>
+									<a
+										href="/franchise-mentor"
+										class="footer-links__item"
+										>Наставник</a
+									>
+								</div>
+								<div class="footer-links-column">
+									<a
+										href="/store"
+										class="footer-links__title"
+									>
+										Магазин
+									</a>
+									<a
+										href="/store-cart"
+										class="footer-links__item"
+										>Корзина</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="footer__item footer__item-end">
+							<div class="footer-socials">
+								<a href="tel:+380972791202">
+									<img src="img/icon/phone.svg" alt="phone" />
+									<span>+380972791202</span>
+								</a>
+								<a href="https://www.instagram.com/">
+									<img
+										src="img/icon/instagram.svg"
+										alt="phone"
+									/>
+									<span>instagram</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__line">
+					UA FPV Academy is copyright ©2025 Web Art Work Architected
+					by Honchar Denys
+				</div>
+			</footer>
+		</div>
+		<!-- HTML -->
+
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
